@@ -1,7 +1,17 @@
 "use client";
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsSidebarCollapsed } from "@/state";
-import { Archive, CircleDollarSign, Clipboard, Icon, Layout, LucideIcon, Menu, SlidersHorizontal, User } from "lucide-react";
+import {
+  Archive,
+  CircleDollarSign,
+  Clipboard,
+  Icon,
+  Layout,
+  LucideIcon,
+  Menu,
+  SlidersHorizontal,
+  User,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -112,7 +122,7 @@ const Sidebar = () => {
           label="Settings"
           isCollapsed={isSidebarCollapsed}
         />
-<SidebarLink
+        <SidebarLink
           href="/expenses"
           icon={CircleDollarSign}
           label="Expenses"
@@ -121,7 +131,7 @@ const Sidebar = () => {
       </div>
 
       {/* FOOTER */}
-      <div>
+      <div className={`${isSidebarCollapsed? "hidden":"block"} mb-10`}>
         <p className="text-center text-xs text-gray-500">&copy; 2025 iStock</p>
       </div>
     </div>

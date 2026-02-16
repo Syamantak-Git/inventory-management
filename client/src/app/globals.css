@@ -11,3 +11,19 @@ html, body, #root, .app {
   @apply bg-gray-500;
   @apply text-gray-900;
 }
+
+@theme {
+  --color-gray-50: theme(colors.gray.50);
+  --color-gray-100: theme(colors.gray.100);
+  --color-gray-900: theme(colors.gray.900);
+}
+
+:root {
+  --bg: var(--color-gray-50);
+  --text: var(--color-gray-900);
+}
+
+.dark {
+  --bg: var(--color-gray-900);
+  --text: var(--color-gray-50);
+}
